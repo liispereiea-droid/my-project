@@ -17,13 +17,14 @@
           <span>首页</span>
         </el-menu-item>
         
-        <el-sub-menu index="1">
-          <template #title>
-            <el-icon><Box /></el-icon>
-            <span>耗材管理</span>
-          </template>
-          <el-menu-item index="/stock">耗材列表</el-menu-item>
-          <el-menu-item index="/category">分类管理</el-menu-item> </el-sub-menu>
+        <el-menu-item index="/stock" v-if="userInfo.role !== 'admin'">
+          <el-icon><Box /></el-icon>
+          <span>耗材申请</span>
+        </el-menu-item>
+
+        <el-menu-item index="/inventory" v-if="userInfo.role === 'admin'">
+          <el-icon><Management /></el-icon> <span>库存管理</span>
+        </el-menu-item>
 
         <el-menu-item index="/apply-list">
           <el-icon><Document /></el-icon>

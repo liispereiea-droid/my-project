@@ -39,6 +39,12 @@ const routes = [
         path: 'admin-stats',
         name: 'AdminStats',
         component: () => import('../views/AdminStats.vue')
+      },
+      // 库存管理 (新增，管理员专用)
+      {
+        path: 'inventory',
+        name: 'Inventory',
+        component: () => import('../views/Inventory.vue')
       }
     ]
   }
