@@ -6,10 +6,10 @@ import com.labsupplysystem.labbackend.entity.User;
 import com.labsupplysystem.labbackend.mapper.UserMapper;
 import com.labsupplysystem.labbackend.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
-
     @Override
     public User registerStudent(User user, Long teacherId) {
         // 1. 校验导师是否存在

@@ -84,6 +84,7 @@ const handleLogin = async () => {
       // 核心修改：把用户信息保存到 localStorage
       // JSON.stringify 是把对象转成字符串存起来
       localStorage.setItem('user_info', JSON.stringify(res.data.data))
+      localStorage.setItem('token', res.data.token)
       
       router.push('/dashboard')
     } else {
