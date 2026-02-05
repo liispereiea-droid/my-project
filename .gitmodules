@@ -1,0 +1,6 @@
+[submodule "lab-frontend"]
+	path = lab-frontend
+	url = https://github.com/liispereiea-droid/lab-frontend.git
+[submodule "lab-backend"]
+	path = lab-backend
+	url = https://github.com/liispereiea-droid/lab-backend.git
