@@ -1,0 +1,2 @@
+### 测试预测接口
+GET http://localhost:8080/api/consumable/predict/1
